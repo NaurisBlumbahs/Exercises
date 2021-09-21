@@ -19,7 +19,12 @@ namespace Exercises.Level1
         /// </summary>
         public bool CigarParty(int cigars, bool isWeekend)
         {
-            throw new NotImplementedException();
+            if (cigars >=40 && (cigars <= 60 || isWeekend))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>
@@ -36,7 +41,18 @@ namespace Exercises.Level1
         /// </summary>
         public int DateFashion(int you, int date)
         {
-            throw new NotImplementedException();
+            if (you <= 2 || date <= 2)
+            {
+                return 0;
+            }
+            else if (you >= 8 || date >= 8)
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
         }
 
         /// <summary>
@@ -51,7 +67,11 @@ namespace Exercises.Level1
         /// </summary>
         public bool SquirrelPlay(int temp, bool isSummer)
         {
-            throw new NotImplementedException();
+            if (temp >= 60 && (temp <= 90 || isSummer && temp <=100))
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -67,7 +87,18 @@ namespace Exercises.Level1
         /// </summary>
         public int CaughtSpeeding(int speed, bool isBirthday)
         {
-            throw new NotImplementedException();
+            if (speed <= 60 || isBirthday && speed <= 65)
+            {
+                return 0;
+            }
+            else if (speed >= 61 && speed <= 80 || isBirthday && speed >= 66 && speed <= 85)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
         }
 
         /// <summary>
@@ -80,7 +111,14 @@ namespace Exercises.Level1
         /// </summary>
         public int SortaSum(int a, int b)
         {
-            throw new NotImplementedException();
+            int sum = a + b;
+
+            if (sum >= 10 && sum <= 19)
+            {
+                return 20;
+            }
+            return sum;
+
         }
 
         /// <summary>
@@ -96,7 +134,23 @@ namespace Exercises.Level1
         /// </summary>
         public string AlarmClock(int day, bool vacation)
         {
-            throw new NotImplementedException();
+            if (vacation && day >= 1 && day <= 5)
+            {
+                return "10:00";
+            }
+            else if (day >= 1 && day <= 5)
+            {
+                return "7:00";
+            }
+            else if (vacation && day == 0 | day == 6)
+            {
+                return "off";
+            }
+            //else if (day == 0 | day == 6)
+            //{
+            //    return "10:00";
+            //}
+            return "10:00";
         }
 
         /// <summary>

@@ -164,7 +164,16 @@ namespace Exercises.Level1
         /// </summary>
         public bool Love6(int a, int b)
         {
-            throw new NotImplementedException();
+            int sum = a + b;
+            int diff = a - b;    
+            int absolutDiff = Math.Abs(diff);
+            int number6 = 6;
+
+            if (a == number6 | b == number6 || sum == number6 | absolutDiff == number6)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -178,7 +187,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool In1To10(int n, bool outsideMode)
         {
-            throw new NotImplementedException();
+            if (outsideMode && n <= 1 | n >= 10)
+            {
+                return true;
+            }
+            else if (!outsideMode && n >= 1 && n <= 10)
+            {
+                return true;
+            }    
+            return false;
         }
 
         /// <summary>
@@ -191,7 +208,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool SpecialEleven(int n)
         {
-            throw new NotImplementedException();
+            return n % 11 <= 1;
         }
 
         /// <summary>
@@ -204,7 +221,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool More20(int n)
         {
-            throw new NotImplementedException();
+            return n % 20 == 1 || n % 20 == 2;
         }
 
         /// <summary>
@@ -217,7 +234,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool Old35(int n)
         {
-            throw new NotImplementedException();
+            return n % 3 == 0 ^ n % 5 == 0;
         }
 
         /// <summary>
@@ -231,7 +248,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool Less20(int n)
         {
-            throw new NotImplementedException();
+            return (n + 1) % 20 == 0 || (n + 2) % 20 == 0;
         }
 
         /// <summary>
@@ -245,7 +262,8 @@ namespace Exercises.Level1
         /// </summary>
         public bool NearTen(int num)
         {
-            throw new NotImplementedException();
+            int a = num % 10;
+            return 8 <= a || 2 >= a;
         }
 
         /// <summary>
@@ -258,7 +276,12 @@ namespace Exercises.Level1
         /// </summary>
         public int TeenSum(int a, int b)
         {
-            throw new NotImplementedException();
+            int sum = a + b;
+            if (a >= 13 && a <= 19 || b >= 13 && b <= 19)
+            {
+                return 19;
+            }
+            return sum;
         }
 
         /// <summary>
@@ -272,7 +295,15 @@ namespace Exercises.Level1
         /// </summary>
         public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            throw new NotImplementedException();
+            if (isAsleep)
+            {
+                return false;
+            }
+            if (isMorning && isMom || !isMorning)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -288,7 +319,15 @@ namespace Exercises.Level1
         /// </summary>
         public int TeaParty(int tea, int candy)
         {
-            throw new NotImplementedException();
+            if (tea < 5 || candy < 5)
+            {
+                return 0;
+            }
+            if ( tea >= 2 * candy || candy >= 2 * tea)
+            {
+                return 2;
+            }
+            return 1;
         }
 
         /// <summary>
@@ -302,7 +341,19 @@ namespace Exercises.Level1
         /// </summary>
         public string FizzString(string str)
         {
-            throw new NotImplementedException();
+            if (str.StartsWith("f") && str.EndsWith("b"))
+            {
+                return "FizzBuzz";
+            }
+            if (str.StartsWith("f"))
+            {
+                return "Fizz";
+            }
+            if (str.EndsWith("b"))
+            {
+                return "Buzz";
+            }
+            return str;    
         }
 
         /// <summary>
@@ -318,7 +369,16 @@ namespace Exercises.Level1
         /// </summary>
         public string FizzString2(int n)
         {
-            throw new NotImplementedException();
+            if (n % 15 == 0)
+                return "FizzBuzz!";
+
+            if (n % 3 == 0)
+                return "Fizz!";
+
+            if (n % 5 == 0)
+                return "Buzz!";
+
+            return n + "!";
         }
 
         /// <summary>
@@ -330,7 +390,9 @@ namespace Exercises.Level1
         /// </summary>
         public bool TwoAsOne(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            if (a + b == c || a + c == b || b + c == a)
+                return true;
+            return false;
         }
 
         /// <summary>
@@ -343,7 +405,9 @@ namespace Exercises.Level1
         /// </summary>
         public bool InOrder(int a, int b, int c, bool bOk)
         {
-            throw new NotImplementedException();
+            if (b > a && c > b || bOk && c > b)
+                return true;
+            return false;
         }
 
         /// <summary>
@@ -357,7 +421,9 @@ namespace Exercises.Level1
         /// </summary>
         public bool InOrderEqual(int a, int b, int c, bool bOk)
         {
-            throw new NotImplementedException();
+            if (a < b && b < c || bOk && a <= b && a <= c && b <= c)
+                return true;
+            return false;
         }
 
         /// <summary>
@@ -371,7 +437,13 @@ namespace Exercises.Level1
         /// </summary>
         public bool LastDigit(int a, int b, int c)
         {
-            throw new NotImplementedException();
+            int A = a % 10;
+            int B= b % 10;
+            int C = c % 10;
+
+            if (A == B || A == C || B == C)
+                return true;
+            return false;
         }
 
         /// <summary>

@@ -18,7 +18,10 @@ namespace Exercises.Level1
         /// </summary>
         public bool FirstLast6(int[] nums)
         {
-            throw new NotImplementedException();
+            bool isFirst = nums[0] == 6;
+            bool isLast = nums[nums.Length - 1] == 6;
+
+            return isFirst || isLast;
         }
 
         /// <summary>
@@ -31,7 +34,9 @@ namespace Exercises.Level1
         /// </summary>
         public bool SameFirstLast(int[] nums)
         {
-            throw new NotImplementedException();
+            if (nums.Length < 1)
+                return false;
+            return nums[0] == nums[nums.Length - 1];
         }
 
         /// <summary>
@@ -41,7 +46,7 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MakePi()
         {
-            throw new NotImplementedException();
+            return new int[] { 3, 1, 4 };
         }
 
         /// <summary>
@@ -54,7 +59,7 @@ namespace Exercises.Level1
         /// </summary>
         public bool CommonEnd(int[] a, int[] b)
         {
-            throw new NotImplementedException();
+            return a[0] == b[0] || a[a.Length - 1] == b[b.Length - 1];
         }
 
         /// <summary>
@@ -66,7 +71,12 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum3(int[] nums)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            foreach(int num in nums)
+            {
+                sum = sum + num;
+            }
+            return sum;
         }
 
         /// <summary>
@@ -79,7 +89,7 @@ namespace Exercises.Level1
         /// </summary>
         public int[] RotateLeft3(int[] nums)
         {
-            throw new NotImplementedException();
+            return new int[] { nums[1], nums[2], nums[0] };
         }
 
         /// <summary>
@@ -92,7 +102,7 @@ namespace Exercises.Level1
         /// </summary>
         public int[] Reverse3(int[] nums)
         {
-            throw new NotImplementedException();
+            return new int[] { nums[2], nums[1], nums[0] };
         }
 
         /// <summary>
@@ -105,7 +115,8 @@ namespace Exercises.Level1
         /// </summary>
         public int[] MaxEnd3(int[] nums)
         {
-            throw new NotImplementedException();
+            int max = Math.Max(nums[0], nums[2]);
+            return new int[] { max, max, max };
         }
 
         /// <summary>
@@ -119,7 +130,12 @@ namespace Exercises.Level1
         /// </summary>
         public int Sum2(int[] nums)
         {
-            throw new NotImplementedException();
+            int sum = nums[0] + nums[1];
+            if (nums.Length < 2 && nums.Length > 0)
+                return nums[0];
+            if (nums.Length >= 2)
+                return sum;
+            return 0;
         }
 
         /// <summary>
